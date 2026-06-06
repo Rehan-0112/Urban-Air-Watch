@@ -1,7 +1,6 @@
-# 🌫️ AQI Intelligence Platform
+# 🌫️ Urban Air Watch
 
-> A real-time air quality monitoring and ML-based forecasting platform for 5 major Indian cities —
-> designed to support urban planners, sustainability teams, and environmental researchers.
+> Tracks real-time AQI and weather across Indian cities, with machine learning forecasts and an interactive dashboard for pollution analysis.
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue?style=flat-square&logo=python)
 ![Pandas](https://img.shields.io/badge/Pandas-2.0-150458?style=flat-square&logo=pandas)
@@ -14,7 +13,7 @@
 
 ## 📌 What This Does
 
-This platform automatically collects real-time AQI and weather data for **Mumbai, Delhi, Chennai, Kolkata, and Bengaluru** every 6 hours, merges it into a structured dataset, and feeds it into machine learning models that forecast pollution levels 24 hours ahead and classify health risk in real time.
+This platform automatically collects real-time AQI and weather data for **Mumbai, Delhi, Pune, Chennai, and Kolkata** every 6 hours, merges it into a structured dataset, and feeds it into machine learning models that forecast pollution levels 24 hours ahead and classify health risk in real time.
 
 The interactive dashboard lets users explore city-level trends, view anomaly spikes, and simulate how changing weather conditions affect air quality — all without touching a line of code.
 
@@ -32,23 +31,23 @@ The interactive dashboard lets users explore city-level trends, view anomaly spi
 - **Delhi peaked at AQI 157 (Unhealthy)** on June 3, 2026 at 11 PM
 - **Mumbai peaked at AQI 160 (Unhealthy)** — recorded during haze conditions
 - **Haze correlates with higher pollution** — average AQI of 104.7 during haze vs 90.4 on clear/cloudy days
-- **Wind speed shows negative correlation with AQI (r = -0.31)** — higher winds = lower pollution, as expected
-- **Humidity shows negative correlation with AQI (r = -0.27)** — drier conditions tend toward worse pollution in these cities
-- **Chennai and Kolkata are comparatively cleaner** — averaging AQI 70.8 and 69.8 respectively (Moderate range)
+- **Wind speed shows negative correlation with AQI (r = -0.31)** — higher winds disperse pollutants
+- **Humidity shows negative correlation with AQI (r = -0.27)** — drier conditions trend toward worse pollution
+- **Chennai and Kolkata are comparatively cleaner** — averaging AQI 70.8 and 69.8 respectively
 
 ---
 
 ## 🗺️ Cities Covered
 
-| City | Avg AQI | Peak AQI | Dominant Pollutant | Typical Condition |
-|------|---------|----------|--------------------|-------------------|
-| Mumbai | 122.6 | 160 | PM2.5 | Haze |
-| Delhi | 101.5 | 157 | PM2.5 / PM10 | Haze / Clear |
-| Chennai | 70.8 | 80 | PM2.5 | Clouds |
-| Kolkata | 69.8 | 103 | PM2.5 | Haze |
-| Bengaluru | — | — | — | Being added |
+| City | Avg AQI | Peak AQI | Dominant Pollutant | Data Status |
+|------|---------|----------|--------------------|-------------|
+| Mumbai | 122.6 | 160 | PM2.5 | ✅ Live |
+| Delhi | 101.5 | 157 | PM2.5 / PM10 | ✅ Live |
+| Chennai | 70.8 | 80 | PM2.5 | ✅ Live |
+| Kolkata | 69.8 | 103 | PM2.5 | ✅ Live |
+| Pune | — | — | — | ⚠️ Stale — see note below |
 
-> **Data quality note:** Pune was removed from the platform after its WAQI monitoring station (`@7567`) was found to be returning data from January 2021 — a 5-year-old stale reading. This was detected automatically by the pipeline's `is_stale` flag. Bengaluru is being onboarded as a replacement.
+> **Data quality note:** Pune's WAQI monitoring station was found to be returning data timestamped January 2021 — over 5 years old. This was caught automatically by the pipeline's `is_stale` flag which marks any reading older than 24 hours. Pune rows are excluded from all analysis and ML training. The city will be replaced with Bengaluru once a reliable station ID is confirmed.
 
 ---
 
@@ -61,7 +60,7 @@ aqi-project/
 │   │   ├── aqi_raw.csv               ← raw AQI data (appended every run)
 │   │   └── weather_raw.csv           ← raw weather data (appended every run)
 │   └── processed/
-│       ├── aqi_weather_merged.csv    ← merged dataset (91 columns, growing daily)
+│       ├── aqi_weather_merged.csv    ← merged dataset (growing daily)
 │       └── aqi_clean.csv             ← outliers removed, features engineered
 ├── notebooks/
 │   ├── eda.ipynb                     ← exploratory data analysis
@@ -93,8 +92,8 @@ aqi-project/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/Rehan-0112
-cd aqi-project
+git clone https://github.com/Rehan-0112/urban-air-watch.git
+cd urban-air-watch
 ```
 
 ### 2. Create and activate virtual environment
@@ -217,7 +216,7 @@ Never commit your `.env` file — it is listed in `.gitignore`.
 
 **Rehan Shaikh**
 2nd Year Engineering Student | Aspiring Data & Sustainability Analyst
-[GitHub](https://github.com/Rehan-0112) · [LinkedIn](https://www.linkedin.com/in/rehan-shaikh-16618023b)
+[GitHub](https://github.com/Rehan-0112) · [LinkedIn](https://linkedin.com/in/yourusername)
 
 ---
 
