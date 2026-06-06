@@ -216,7 +216,7 @@ Never commit your `.env` file — it is listed in `.gitignore`.
 
 **Rehan Shaikh**
 2nd Year Engineering Student | Aspiring Data & Sustainability Analyst
-[GitHub](https://github.com/Rehan-0112) · [LinkedIn](https://linkedin.com/in/yourusername)
+[GitHub](https://github.com/Rehan-0112) · [LinkedIn](https://www.linkedin.com/in/rehan-shaikh-16618023b)
 
 ---
 
