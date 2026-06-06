@@ -2,8 +2,8 @@
 
 > Tracks real-time AQI and weather across Indian cities, with machine learning forecasts and an interactive dashboard for pollution analysis.
 
-![Python](https://img.shields.io/badge/Python-3.11-blue?style=flat-square&logo=python)
-![Pandas](https://img.shields.io/badge/Pandas-2.0-150458?style=flat-square&logo=pandas)
+![Python](https://img.shields.io/badge/Python-3.13-blue?style=flat-square&logo=python)
+![Pandas](https://img.shields.io/badge/Pandas-3.0-150458?style=flat-square&logo=pandas)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?style=flat-square&logo=streamlit)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-F7931E?style=flat-square&logo=scikit-learn)
 ![Prophet](https://img.shields.io/badge/Prophet-Forecasting-0072C6?style=flat-square)
