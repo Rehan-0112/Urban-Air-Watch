@@ -64,14 +64,14 @@ aqi-project/
 │       └── aqi_clean.csv             ← outliers removed, features engineered
 ├── notebooks/
 │   ├── eda.ipynb                     ← exploratory data analysis
-│   └── model_experiments.ipynb      ← model comparison and evaluation
+│   └── model_experiments.ipynb       ← model comparison and evaluation
 ├── src/
-│   ├── data_pipeline.py             ← fetches AQI + weather, merges, saves
-│   ├── clean_data.py                ← handles nulls, outliers, feature engineering
-│   ├── train_model.py               ← baseline LR + Prophet + Random Forest
-│   └── anomaly_detection.py        ← Isolation Forest spike detection
+│   ├── data_pipeline.py              ← fetches AQI + weather, merges, saves
+│   ├── clean_data.py                 ← handles nulls, outliers, feature engineering
+│   ├── train_model.py                ← baseline LR + Prophet + Random Forest
+│   └── anomaly_detection.py          ← Isolation Forest spike detection
 ├── dashboard/
-│   └── app.py                       ← Streamlit interactive dashboard
+│   └── app.py                        ← Streamlit interactive dashboard
 ├── models/
 │   ├── baseline_lr.pkl
 │   ├── health_risk_rf.pkl
